@@ -13,12 +13,19 @@
 </head>
 
 <body>
-  <img src="oonnoonnies.jpg"/>
+
+
+		<div class="page-body">
+      <img src="oonnoonnies.jpg" width="150%"/>
+
+    </div>
   <script src="js/zoom.js"></script>
   <script>
-  zoom.to({
-    element: document.querySelector( 'img' )
-  });
+  document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				zoom.to({ element: event.target,   scale: 5 });
+
+			} );
   </script>
 </body>
 </html>
