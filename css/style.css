@@ -1,8 +1,47 @@
 body{
-  background: #ccc;
+  background: #eee;
+  font-family: 'Roboto', sans-serif;
 }
 .page-header, .page-body {
     width: auto;
+    height: auto;
     margin: 0 auto;
-    padding: 40px;
+    overflow:hidden;
+
+}
+h1, .c{
+      text-align: center;
+}
+#scene{
+  z-index: 500;
+  margin-top: 5px;
+}
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+      outline: none;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    outline: none;
+}
+.center {
+  height: 600px;
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+input:focus {
+    outline:none;
 }

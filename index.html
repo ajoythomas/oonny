@@ -7,25 +7,41 @@
   <title>The Oonnoonny Family Tree</title>
   <meta name="description" content="Oonnoonny Family Tree">
   <meta name="author" content="Ajoy Thomas">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link rel="stylesheet" href="css/style.css?v=1.0">
-
+<script src='https://unpkg.com/panzoom@8.0.0/dist/panzoom.min.js'></script>
 </head>
 
 <body>
+<header>
+  <h1>Oonnoonny Family Tree</h1>
+    <p class="c"><a href="oonnoonnies.jpg">Download for Web</a> | <a href="oonny.pdf">Download for Print</a> | <a href="OonnoonnyFamilyTree.ged">Ged File</a>
+    <br><small>(Double Click to Zoom. Drag to Pan)</small>  </p>
 
+</header>
 
-		<div class="page-body">
-      <img src="oonnoonnies.jpg" width="150%"/>
+<div class="page-body">
 
+		<div id="scene" class="grabbable center">
+
+    <p class="tree"> <img src="oonnoonnies.jpg" width="100%"/></p>
     </div>
-  <script src="js/zoom.js"></script>
+</div>
   <script>
-  document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
-				event.preventDefault();
-				zoom.to({ element: event.target,   scale: 5 });
+  // just grab a DOM element
+var element = document.querySelector('#scene')
 
-			} );
+// And pass it to panzoom
+panzoom(element, {
+  maxZoom: 10,
+  minZoom: 0.1
+}).zoomAbs(
+  500, // initial x position
+  0, // initial y position
+  1.5  // initial zoom
+);
   </script>
 </body>
 </html>
