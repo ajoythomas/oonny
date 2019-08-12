@@ -9,8 +9,15 @@ body{
     overflow:hidden;
 
 }
-h1, .c{
+h1{
       text-align: center;
+      padding-top: 10px;
+}
+.c{
+position: fixed;
+top: 2px;
+right: 5px;
+font-size: 14px;
 }
 #scene{
   z-index: 500;
